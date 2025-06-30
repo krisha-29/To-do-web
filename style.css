@@ -1,0 +1,179 @@
+/* ====== BASE STYLES ====== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f6f9;
+  color: #2c3e50;
+  margin: 0;
+  padding: 20px;
+  transition: background 0.3s, color 0.3s;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+/* ====== FORM ELEMENTS ====== */
+input, select, button {
+  padding: 10px;
+  margin: 5px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: all 0.2s;
+}
+
+input:focus, select:focus {
+  border-color: #2980b9;
+  box-shadow: 0 0 5px rgba(41, 128, 185, 0.4);
+}
+
+button {
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1c6ea4;
+}
+
+/* ====== TASK LISTS ====== */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: white;
+  margin-bottom: 12px;
+  padding: 15px;
+  border-left: 5px solid #2980b9;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: all 0.3s;
+  position: relative;
+}
+
+li.completed {
+  border-left-color: #2ecc71;
+  background-color: #ecf9f1;
+  color: #7f8c8d;
+  text-decoration: line-through;
+}
+
+.timestamp {
+  font-size: 11px;
+  color: #888;
+  margin-top: 5px;
+}
+
+/* ====== TASK BUTTONS ====== */
+.task-buttons {
+  margin-top: 10px;
+}
+
+.task-buttons button {
+  margin-right: 6px;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+button.complete {
+  background-color: #27ae60;
+}
+
+button.complete:hover {
+  background-color: #1e8449;
+}
+
+button.edit {
+  background-color: #f1c40f;
+  color: #333;
+}
+
+button.edit:hover {
+  background-color: #d4ac0d;
+}
+
+button.delete {
+  background-color: #e74c3c;
+}
+
+button.delete:hover {
+  background-color: #c0392b;
+}
+
+/* ====== PROGRESS BAR ====== */
+#progressBar {
+  margin-top: 30px;
+  width: 100%;
+  height: 25px;
+  background-color: #dfe6e9;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#progressFill {
+  height: 100%;
+  background-color: #2980b9;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+#progressPercent {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  line-height: 25px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+/* ====== DARK THEME ====== */
+.dark-theme {
+  background-color: #1e272e;
+  color: #ecf0f1;
+}
+
+.dark-theme h1,
+.dark-theme h2 {
+  color: #ecf0f1;
+}
+
+.dark-theme input,
+.dark-theme select,
+.dark-theme button {
+  background-color: #2f3640;
+  color: #ecf0f1;
+  border-color: #555;
+}
+
+.dark-theme li {
+  background-color: #2d3436;
+  border-left-color: #3498db;
+}
+
+.dark-theme li.completed {
+  background-color: #344e41;
+  border-left-color: #2ecc71;
+  color: #bdc3c7;
+}
+
+.dark-theme #progressBar {
+  background-color: #555;
+}
+
+.dark-theme #progressFill {
+  background-color: #3498db;
+}
+
+.dark-theme #progressPercent {
+  color: #ecf0f1;
+}
